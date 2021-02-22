@@ -20,5 +20,7 @@ b. Unit testing
 
 Course Text
 The Modern JavaScript Tutorial, Ilya Kantor, 2021. https://javascript.info
+
 “The Modern JavaScript Tutorial was created in 2007 by Ilya Kantor, and regularly updated since then. New chapters were added, outdated ones - removed, to stay fresh. The PDF version is about 1300 pages, starting from the beginning, and then to advanced topics.
+
 “It's a book, not a video, as for many people reading is faster. Also, books are easier to update, keep modern :). “ https://javascript.info/about
