@@ -1,0 +1,38 @@
+1/ What happens when an assignment is performed without using let or const keywords in strict mode?
+It would cause an error in strict mode.
+
+2/ List 5 reserved keywords in JavaScript
+delete
+break
+continue
+void
+while
+
+3/ How is a computer program similar/ different than an algorithm?
+Similar:
+including a sequence of instructions
+
+Different:
+An algorithm is a sequence of instructions to achieve a specific task.
+
+A computer program is an algorithm written using a language that a machine can understand and execute. 
+
+4/ Write at least two algorithms you perform on your daily life, with at least one algorithm that can be converted to computer program.
+
+a. Algorithm to make peanut butter overnight oats:
+- 1/2 cup rolled oats
+- 3/4 cup almond milk
+- 1/4 cup Greek yogurt 
+- 1 tbsp chia seeds
+- 1 tbsp peanut butter
+Step 1: Add together all ingredients in a 16oz mason Jar 
+Step 2: Mix the overnight oats together until see no clumps
+Step 3: Seal or cover with a lid
+Step 4: Let sit in the fridge overnight
+Step 5: Grab a spoon, add favourite toppings and dig in the next morning.
+
+b. Algorithm to put on shoes:
+Step 1: Pick up shoes
+Step 2: Put foot on shoe
+Step 3: Tie the shoes
+
