@@ -1,0 +1,9 @@
+1. What happens when you forget a break while using switch statement?
+    If there is no break then the execution continues with the next case without any checks.
+
+2. What will be the output of running following code?
+    0
+    1
+
+3. Will output change if value of foo is a ‘0’ (0 in quotes) instead?
+    YES

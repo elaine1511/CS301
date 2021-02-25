@@ -1,0 +1,35 @@
+1/ What does it mean to say JS is dynamically typed?
+At runtime variables type is determined by what is dynamically assigned to them.
+
+2/ what does it mean to say JS is loosely typed?
+meaning we don't have to specify what type of information will be stored in a variable in advance
+
+3/ Are null and undified the same things in JS? what is the difference?
+NO
+null: is assigned by programmer to indicate no know value yet.
+undefined: is the value given by the complier to variables that have not been assigned a value.
+
+4/ What values are falsy?Truthy?
+"falsy" values: 0, 0.0, NaN, "", null, and undefined    
+"truthy" values: anything else
+
+5/ Is it better to use == or ====? Why?
+=== because it does not automatic type conversion.
+
+6/ Write code that illustrates an error if you do not convert user input
+someone enter '
+
+7/ what is the output for the following code?
+let x=null;
+let y;
+console.log(typeof(x)); //object
+console.log(typeof(y)); //undefined
+console.log(x++);// 1
+y++;
+console.log(x,y);//NaN
+y=false;
+console.log(x<y);//false
+x+='2';
+console.log(x);//'12'
+console.log(x>y);//true
+
