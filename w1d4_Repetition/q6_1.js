@@ -7,10 +7,11 @@
 */
 
 for (let i = 1; i <= 5; i++) {
-    for (let j = 1; j <= i; j++) {
-        console.log(i);
+    let row = ' ';
+    for (let j = 0; j < i; j++) {
+        row += i;
     }
-    console.log('\t');
+    console.log(row);
 }
 
 

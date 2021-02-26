@@ -8,22 +8,18 @@ When run out of tries display “Sorry but you have been locked out.”
 'use trict';
 
 const prompt = require('prompt-sync')();
-let pinGuess = +prompt("Please enter your pin number: ");
+const correctPin = '1234';
+let pinAttempts = 0;
 
-const correctPin = 1234;
-
-
-
-
-if (pinGuess !== correctPin) {
-
-    for (let i = 1; i <= 3; i++) {
-        console.log('Incorrect, try again');
-        prompt("Please enter your pin number: ");
-        continue;
+while (pinAttempts < 3) {
+    let pinInput = prompt("Please enter your Pin: ");
+    if (pinInput === correctPin) {
+        console.log('Correct, welcome back');
+        return;
     }
-    console.log('Sorry but you have been locked out');
+    else {
+        console.log('Incorrect, try again');
+    }
+    pinAttempts++;
 }
-
-
-
+console.log('Sorry but you have been locked out.');
