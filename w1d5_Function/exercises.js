@@ -1,39 +1,48 @@
-/* 3. Write a defining table and JavaScript program to check whether a number is Perfect number or
-not?
-Perfect number is a positive integer which is equal to the sum of its proper positive divisors.
-For example: 6 is the first perfect number
-Proper divisors of 6 are 1, 2, 3
-Sum of its proper divisors = 1 + 2 + 3 = 6.
-Hence 6 is a perfect number
+'use strict';
+/*
+Write a function named testPrime that returns true when argument to the function is a prime number, otherwise returns false.
+• Now call the function to test if user input is prime or not.
+*/
 
-Input: positive interger
-Output: true or false
-Process: 
-    - initial sum to 1 (cause 1 always included)
-    - loop from 2 to the num-1
-    - in the loop check if the index is a factor, ie: num%index===0;
-    - if so add to sum
-    - Finally check to see if sum===num, then is perfect
+/** 
+* @param {number} is any integer
+* @return {boolean} true or false
+* process: 
+* -   lopp from 2 to number and check for factors
 
 */
-'use trict';
 
-const prompt = require('prompt-sync')();
-let number = +prompt("Please enter positive interger: ");
-let sum = 1;
-let isPerfectNum = true;
-
-for (let i = 2; i < number; i++) {
-    if (number % i === 0) {
-        sum = sum + (number / i);
-        if (sum === number) {
-            isPerfectNum = true;
-        }
-        else {
-            isPerfectNum = false;
+function testPrime(number) {
+    for (let i = 2; i < number; i++) {
+        if (number % i === 0) {
+            return false;
         }
     }
+    return true;
 }
-console.log(isPerfectNum);
 
+
+console.log('expect true for 5: ', testPrime(5));
+console.log('expect false for 55: ', testPrime(55));
+
+// Scope exercise
+let x = 10;
+function main() {
+    let x = 0;
+    console.log("x1 is " + x); //x1=0
+    x = 20;
+    console.log("x2 is " + x); //x2=20
+    if (x > 0) {
+        x = 30;
+        console.log("x3 is " + x);//x3=30
+    }
+    console.log("x4 is " + x); //x4=30
+    function f(x) {
+        console.log("x5 is " + x); //x5=50
+    }
+    f(50);
+    console.log("x6 is " + x);//x6=30
+}
+main();
+console.log("x7 is " + x);//x7=10
 
