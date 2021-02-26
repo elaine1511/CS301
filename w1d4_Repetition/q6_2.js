@@ -1,15 +1,15 @@
-
 /*
-55555
-4444
-333
-22
 1
+12
+123
+1234
+12345
 */
-let row = '';
+
 for (let i = 1; i <= 5; i++) {
-    for (let j = 1; j <= 5 + 1 - i; j++) {
-        row += i;
+    let row = ' ';
+    for (let j = 1; j <= i; j++) {
+        row += j;
     }
     console.log(row);
 }
