@@ -7,12 +7,18 @@ startingfrom0and1.Thatis, fib(0)=0,fib(1)=1,fib(n)=fib(n–1)+fib(n–2)forn>1.
 */
 
 /*
-Input: need 3 inputs : f1, f2 and f 
-and N terms from user input
+Input: number
 Output: f series
 Process:
--using while loop
-
+-   for n>2, fib=fibPrevious + fibPrevious2
+-   first number===0;
+-   fibPrevious=0
+-   Second number->1
+-   fibPrevious2=1
+-   loop from 2 to number
+-   fib=fibPrevious + fibPrevious2 and log fib
+-   fibPrevious=fib;
+-   fibPrvious2=fibPrevious
 */
 
 'use trict';
@@ -27,5 +33,5 @@ while (f < num) {
     f0 = f1;
     f1 = f;
     f = f0 + f1;
-    console.log(f0, f1, f);
+    console.log(f);
 }
