@@ -56,12 +56,12 @@ Process:
 'use trict';
 
 const prompt = require('prompt-sync')();
-let number = +prompt("Please enter positive interger: ");
-let sum = 1;
+let number = +prompt("Please enter a number to test: ");
+let sumOfFactor = 1;
 
-for (let i = 2; i < number; i++) {
+for (let i = 1; i < number; i++) {
     if (number % i === 0) {
-        sum = sum + i;
+        sumOfFactor += i;
     }
 }
 if (sum === number) {

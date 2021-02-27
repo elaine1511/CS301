@@ -21,7 +21,6 @@ function testPrime(number) {
     return true;
 }
 
-
 console.log('expect true for 5: ', testPrime(5));
 console.log('expect false for 55: ', testPrime(55));
 

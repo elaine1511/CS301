@@ -1,0 +1,11 @@
+1. What are alternatives to default parameters?
+|| operator
+nullish coalescing operator ??
+
+2. What are things you should consider while naming a function?
+- Function's name is usually a verb. 
+- It should be brief, as accurate as possible and describe what the function does,
+- Sstart a function with a verbal prefix which vaguely describes the action. 
+
+3. Do functions need to be always commented? Write your understanding based on the reading.
+Functions don't 
