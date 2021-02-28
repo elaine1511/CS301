@@ -10,29 +10,29 @@ Write code to call and test your function
 
 // */
 'use script';
-const prompt = require('prompt-sync')();
-let w = +prompt('please enter width of your house: ');
-let h = +prompt('please enter height of your house: ');
-let d = +prompt('please enter depth of your house: ');
-let s = (w + h + d) / 2;
 
-
-function triangleArea() {
-    return (Math.sqrt(s * (s - w) * (s - h) * (s - d)));
+function triangleArea(sideA, sideB, sideC) {
+    const s = (sideA + sideB + sideC) / 2;
+    const product = s * (s - sideA) * (s - sideB) * (s - sideC);
+    const result = Math.sqrt(product);
+    return result;
 }
 
-function roofVolume() {
-    return triangleArea() * d;
+function roofVolume(sweep, width, depth) {
+    return triangleArea(sweep, sweep, width) * depth;
 }
 
-function livingVolume() {
-    return w * h * d;
+function livingVolume(width, height, depth) {
+    return width * height * depth;
 }
 
-function houseVolume() {
-    return livingVolume() + roofVolume();
+function houseVolume(width, height, depth, sweep) {
+    let lv = livingVolume(width, height, depth);
+    let rv = roofVolume(sweep, sweep, width);
+    return lv + rv;
 }
-console.log(houseVolume());
+
+console.log(houseVolume(16, 10, 10, 10));
 
 
 
