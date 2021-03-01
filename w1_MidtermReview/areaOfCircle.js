@@ -11,7 +11,7 @@ let radius;
 do {
     radius = prompt('Please enter radius: ');
 
-} while (radius < 0);
+} while (radius <= 0);
 
 let areOfCircle = Math.PI * radius * radius;
 console.log(areOfCircle);
