@@ -10,11 +10,13 @@ first)
 o Refactor to pass add logic as an arrow function. (Make a copy first)
 */
 'use strict';
-let add = function ()
-let compute = function (add, num1, num2) {
-    add = function (num1, num2) {
-        return num1 + num2;
-    }
+let display = function (result) {
+    console.log(result);
 }
 
-console.log(compute(add, 2, 3));
+let compute = function (num1, num2, add) {
+    let sum = num1 + num2;
+    add(sum);
+}
+
+compute(2, 3, display);
