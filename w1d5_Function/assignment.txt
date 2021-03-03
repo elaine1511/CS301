@@ -9,3 +9,16 @@ nullish coalescing operator ??
 
 3. Do functions need to be always commented? Write your understanding based on the reading.
 Functions don't 
+
+4. When should you choose Function Declaration versus Function Expression and
+why?
+As a rule of thumb, when we need to declare a function, the first to consider is Function Declaration syntax. 
+It gives more freedom in how to organize our code, because we can call such functions before they are declared.
+
+But if a Function Declaration does not suit us for some reason, 
+or we need a conditional declaration, then Function Expression should be used.
+
+5. Functions are values in JavaScript. They can be assigned, copied, or declared in any
+place of the code. Is this a true or a false statement? Support your answer with
+examples.
+True
