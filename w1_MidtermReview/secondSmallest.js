@@ -11,7 +11,7 @@ For e.g. secondSmallest(-1,9,7) → 7
  * - a<b<c or c<b<a : b is second smallest
  * - c is second smallest
  */
-'use strict';
+"use strict";
 
 function secondSmallest(a, b, c) {
     if (b < a && a < c || c < a && a < b) {

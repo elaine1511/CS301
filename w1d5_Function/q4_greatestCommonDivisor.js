@@ -15,3 +15,25 @@ let greatestCommonDivisor = function (num1, num2) {
 }
 
 console.log(greatestCommonDivisor(98, 56));
+
+//another solution
+/**
+ * @param {number} num1 positive int
+ * @param {number} num2 positive int
+ * @return {number} gcd
+ * process: loop from 2 to min(num1,num2) and test if num divides both,
+ * last one will be largest 
+ */
+
+let greatest = function (num1, num2) {
+    let largest = null;
+    const looplimit = Math.min(num1 / 2, num2 / 2);
+    for (let i = 2; i <= looplimit; i++) {
+        if (num1 % i === 0 && num2 % i === 0) {
+            largest = i;
+        }
+    }
+    return largest;
+}
+console.log(greatest(98, 56));
+

@@ -14,8 +14,12 @@ Write a function named isStacked that returns true if its argument is stacked. O
 So for example, isStacked(10) should return true and isStacked(7) should return false.
 */
 
-'use strict';
-
+"use strict";
+/**
+ * 
+ * @param {number} num is number to be tested
+ * @return {boolean} true or false 
+ */
 function isStacked(num) {
     let sum = 0;
     for (let i = 1; i <= num; i++) {

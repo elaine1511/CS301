@@ -10,6 +10,11 @@ Write code to call and test your function
 
 // */
 'use script';
+function houseVolume(width, height, depth, sweep) {
+    let lv = livingVolume(width, height, depth);
+    let rv = roofVolume(sweep, sweep, width);
+    return lv + rv;
+}
 
 function triangleArea(sideA, sideB, sideC) {
     const s = (sideA + sideB + sideC) / 2;
@@ -26,11 +31,7 @@ function livingVolume(width, height, depth) {
     return width * height * depth;
 }
 
-function houseVolume(width, height, depth, sweep) {
-    let lv = livingVolume(width, height, depth);
-    let rv = roofVolume(sweep, sweep, width);
-    return lv + rv;
-}
+
 
 console.log(houseVolume(16, 10, 10, 10));
 
