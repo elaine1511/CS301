@@ -6,6 +6,7 @@ exports.getMiddle = getMiddle;
 exports.rotateLeft = rotateLeft;
 exports.rotateRight = rotateRight;
 exports.rotateNRight = rotateNRight;
+exports.filterRange = filterRange;
 
 /* 1.	Write a function addend(arr) that accepts an array of numbers as parameters and 
 returns the sum of first and last elements of the array. */
@@ -82,4 +83,38 @@ function rotateNRight(arr, num) {
     }
     return arr;
 }
-// console.log(rotateNRight([1, 2, 3, 4, 5], 3));
+/* 6. Write a JavaScript function that takes a string of numbers as comma separated values, e.g, “32, 105,  -22”,  
+and stores it into an array, e.g., [32, 105, -22] and do following operations
+a.    Filters out negative values
+b.    Maps the filtered elements to sum of its digits--i.e., 32 becomes 5 and 105 becomes 6
+c.    Reduce to get sum of all the elements and returns this value--i.e, add the 5 and 6 to get 11
+*/
+// function fmrString(str) {
+//     let arr = [];
+//     for (let i = 0; i < str.length; i++) {
+//         arr.push(parseInt(str[i]));
+//     }
+//     return arr;
+
+// }
+
+/* 7.    Write a function filterRange(arr, a, b) that gets an array arr, looks for elements with values
+higher or equal to a and lower or equal to b and return a result as an array. */
+/**
+ * 
+ * @param {array} arr is an array to be tested
+ * @param {number} a is a number to be compared
+ * @param {number} b is a number to be compared
+ * @return {array} new array
+ */
+// eslint-disable-next-line id-length
+function filterRange(arr, a, b) {
+    let newArr = [];
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] >= a && arr[i] <= b) {
+            newArr.push(arr[i]);
+        }
+    }
+    return newArr;
+}
+console.log(filterRange([1, 2, 3, 4, 5], 4, 5));
