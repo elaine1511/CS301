@@ -1,9 +1,11 @@
+/* eslint-disable require-jsdoc */
 "use strict";
-
-const { kMaxLength } = require("buffer");
 
 exports.addends = addends;
 exports.getMiddle = getMiddle;
+exports.rotateLeft = rotateLeft;
+exports.rotateRight = rotateRight;
+exports.rotateNRight = rotateNRight;
 
 /* 1.	Write a function addend(arr) that accepts an array of numbers as parameters and 
 returns the sum of first and last elements of the array. */
@@ -40,11 +42,11 @@ function getMiddle(arr) {
  * @return {array} new array after rotating the elements to the left by 1
  */
 function rotateLeft(arr) {
-    let temp = arr[0];
+    let first = arr[0];
     for (let i = 0; i < arr.length; i++) {
         arr[i] = arr[i + 1];
     }
-    arr[arr.length - 1] = temp;
+    arr[arr.length - 1] = first;
     return arr;
 }
 /* 4.	Write a function to rotate the elements in an array to the right by 1. */
@@ -53,3 +55,31 @@ function rotateLeft(arr) {
  * @param {array} arr is an array to be tested
  * @return {array} new array after rotating the elements to the right by 1
  */
+function rotateRight(arr) {
+    let last = arr[arr.length - 1];
+    for (let i = arr.length - 1; i > 0; i--) {
+        arr[i] = arr[i - 1];
+    }
+    arr[0] = last;
+    return arr;
+}
+
+/* 5. Modify each rotate function to rotate array by n times where, 
+n is the second parameter passed in the function (EC). n < number of elements */
+/**
+ * 
+ * @param {array} arr is an array to be tested
+ * @param {number} num is number of times an array to be rotated
+ * @return {array} new array after rotating the elements to the right by n times
+ */
+function rotateNRight(arr, num) {
+    for (let i = 0; i < num; i++) {
+        let last = arr[arr.length - 1];
+        for (let j = arr.length - 1; j > 0; j--) {
+            arr[j] = arr[j - 1];
+        }
+        arr[0] = last;
+    }
+    return arr;
+}
+// console.log(rotateNRight([1, 2, 3, 4, 5], 3));
