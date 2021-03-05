@@ -1,0 +1,11 @@
+Ninja irony: Make the code as short as possible. Show how smart you are
+    Meaning: do not sacrifice code clarity for brevity. 
+
+use single-letter variable names everywhere.
+    Meaning: 
+
+If the team rules forbid the use of one-letter and vague names – shorten them, make abbreviations
+    Meaning: 
+
+While choosing a name try to use the most abstract word
+    Meaning: 

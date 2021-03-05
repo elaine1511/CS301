@@ -4,65 +4,63 @@ Write a function named isSumFirstLastOdd, that takes an integer number as an arg
 isSumFirstLastOdd(12363) à false, because sum of 1 and 3 is 4 which is even
 
 isSumFirstLastOdd(12764) à true, because sum of 1 and 4 is 5 which is odd
-
-input: pos integer
-output: true if sum is odd, false if sum is even
-process: 
-    go through all the digits in a while loop
-    save the first and last digit and add them and check for divisible by 2
 */
+/* eslint-disable */
 
-'use strict';
+/* input pos integer 
+output true if sum of smallest and largest digits is odd 
+process:
+ go through all the digits in a while loop
+ save the first and last and add them and check for divisible by 2
+ */
 
+function isOdd(number) {
+    let smallest = null;  //digit in unit position
+    let greatest = null;  //digit in greatest position
+    let last = null;  //placeholder to remember last digit left before number goes to 0
+    while (number > 0) {
+
+        let quotient = null;
+        if (smallest === null) {
+            smallest = number % 10;
+        } else {
+            const remainder = number % 10;
+            last = remainder;
+            number = Math.floor(number / 10);
+        }
+        if (number === 0) {
+            greatest = last;
+            const sum = smallest + greatest;
+            const result = sum % 2 !== 0;
+            return result;
+        }
+    }
+}
+
+console.log("expect false for 789 : ", isOdd(789));
+console.log("expect true for 1234 : ", isOdd(1234));
+
+/**
+ * 
+ * @param {number} num is tested 
+ * @return {boolean} true or false
+ */
 function isSumFirstLastOdd(num) {
-    let sum = firstDigit(num) + lastDigit(num);
+    let lastDigit = num % 10;
+
+    let firstDigit = 0;
+    while (num > 9) {
+        num = Math.floor(num / 10);
+        firstDigit = num;
+    }
+    let sum = firstDigit + lastDigit;
+
     if (sum % 2 === 0) {
         return false;
-    }
-    return true;
-}
-
-function lastDigit(num) {
-    let last = num % 10;
-    return last;
-}
-
-function firstDigit(num) {
-    let first = reversedNum(num) % 10;
-    return first;
-}
-
-function reversedNum(num) {
-    let reversed = 0;
-    while (num > 0) {
-        let digit = num % 10;
-        reversed = reversed * 10 + digit;
-        num = Math.floor(num / 10);
-    }
-    return reversed;
-}
-
-//another solution
-
-function isSumOdd(num) {
-    let smallest = null;
-    let greatest = null;
-    let last;
-    while (num > 0) {
-        if (smallest === null) {
-            smallest = num % 10;
-        } else {
-            num = num % 10;
-            last = num;
-            quotient = Math.floor(num / 10);
-        }
-
+    } else {
+        return true;
     }
 }
-
-
-
-
-
-
 console.log(isSumFirstLastOdd(12363));
+
+
