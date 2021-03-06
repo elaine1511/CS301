@@ -73,7 +73,7 @@ c.    Reduce to get sum of all the elements and returns this value--i.e, add the
 */
 describe("filter map reduce string", function () {
     it("tests 32, 105,  -22 ", function () {
-        assert.strictEqual(arrays.fmrString("32, 105,  -22"), 11);
+        assert.deepStrictEqual(arrays.fmrString([32, 105, -22]), 11);
     });
 });
 
@@ -81,14 +81,14 @@ describe("filter map reduce string", function () {
 lower or equal to b and return a result as an array. */
 describe("filterRange", function () {
     it("tests [0, 100, 3, 6, -555], 6, 160", function () {
-        assert.strictDeepEqual(arrays.filterRange([0, 100, 3, 6, -555], 6, 160), [100, 6]);
+        assert.deepStrictEqual(arrays.filterRange([0, 100, 3, 6, -555], 6, 160), [100, 6]);
     });
 });
 
 /* 8.	Write a function that takes an array of strings and returns array of palindrome strings only. */
 describe("filterPalindromes", function () {
     it("tests [not, a, kayak, eagle, racecar]", function () {
-        assert.strictDeepEqual(arrays.filterPalindromes(["not", "a", "kayak", "eagle", "racecar"]), ["a", "kayak", "racecar"]);
+        assert.deepStrictEqual(arrays.filterPalindromes(["not", "a", "kayak", "eagle", "racecar"]), ["a", "kayak", "racecar"]);
     });
 });
 
@@ -96,7 +96,7 @@ describe("filterPalindromes", function () {
 describe("Matrix", function () {
     describe("matrixAddition", function () {
         it("matrix addition of [[0,1,2],[9,8,7]] and [[6,5,4], [3,4,5]]  should be [ [ 6, 6, 6 ], [ 12, 12, 12 ] ]", function () {
-            assert.deepStrictEqual(matrixAddition([[0, 1, 2], [9, 8, 7]], [[6, 5, 4], [3, 4, 5]]), [[6, 6, 6], [12, 12, 12]]);
+            assert.deepStrictEqual(arrays.matrixAddition([[0, 1, 2], [9, 8, 7]], [[6, 5, 4], [3, 4, 5]]), [[6, 6, 6], [12, 12, 12]]);
         });
     });
 });
