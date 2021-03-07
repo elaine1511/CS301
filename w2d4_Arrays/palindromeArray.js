@@ -28,25 +28,17 @@ console.log(isPalindrome([1, 2, 3, 2, 1]));
 // loop through the array of strings
 
 function filterPalindrome(arr) {
-    let newArr = [];
-    for (let i = 0; i < arr.length; i++) {
-        let str = stringToArray(arr[i]);
-        if (isPalindrome(str) === true) {
-            newArr.push(arr[i]);
+    const palArray = [];
+    for (const nextString of arr) {
+        const charArray = nextString.split("");
+        if (isPalindromes(charArray)) {
+            palArray.push(nextString);
         }
     }
-    return newArr;
+    return palArray;
 }
 
-function stringToArray(str) {
-    let array = [];
-    for (let items of str) {
-        array.push(items);
-    }
-    return array;
-}
-
-function isPalindrome(arr) {
+function isPalindromes(arr) {
     // loop through half length of the array
     for (let i = 0; i < arr.length / 2; i++) {
         // check if first half equal to the second half

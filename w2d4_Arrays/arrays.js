@@ -164,7 +164,7 @@ function filterPalindromes(arr) {
     let newArr = [];
     for (let i = 0; i < arr.length; i++) {
         let str = stringToArray(arr[i]);
-        if (isPalindrome(str) === true) {
+        if (isPalindrome(str)) {
             newArr.push(arr[i]);
         }
     }
