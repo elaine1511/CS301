@@ -105,3 +105,8 @@ console.log(ssReverse([2, 3, 4, 5]));
 
 /*   6. (EC) Write a function that merges two sorted arrays into one single sorted array.
 Make use of shift and push array methods. */
+function merge(arr1, arr2) {
+
+}
+
+console.log(merge([1, 3, 8], [0, 5, 9]));// [0, 1, 3, 5, 8, 9]
