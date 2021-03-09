@@ -21,5 +21,5 @@ function myComparator(a, b) {
     } else {
         return -1;
     }
-    // can be only 1 line of code: return a-b 
+    // this if else   can be only 1 line of code: return a-b 
 }

@@ -1,3 +1,4 @@
+/* eslint-disable require-jsdoc */
 "use strict";
 
 const { get } = require("http");
@@ -85,9 +86,16 @@ function checkSpam(str) {
     }
     return false;
 }
+function checkSpam1(str) {
+    if (str.includes("lottery") || str.includes("prize")) {
+        return true;
+    } else {
+        return false;
+    }
+}
 const string1 = "there is a prize in the lottery";
 const string2 = "there is a nothing in the fridge";
-console.log(checkSpam(string1));
+console.log(checkSpam1(string1));
 console.log(checkSpam(string2));
 
 
@@ -110,9 +118,9 @@ function suffix(str1, str2) {
         if (str1[len1 - i - 1] !== str2[len2 - i - 1]) {
             return suffix;
         }
-        suffix = suffix + str1[len1 - i - 1];
+        suffix = str1[len1 - i - 1] + suffix;
     }
-    return suffix.split().reverse().join("");
+    return suffix;
 }
 console.log(suffix("jackson", "johnson"));
 
@@ -158,13 +166,13 @@ arr = [[1, 2], [3, 4], [5, 6]]
 */
 /**
  * 
- * @param {*} arr is tested
- * @return {number} sum
+ * @param {*} arr with subarray of numbers
+ * @return {number} sum of the first element
  */
 function sumFirst(arr) {
     let sum = 0;
-    for (let i = 0; i < arr.length; i++) {
-        sum = sum + arr[i][0];
+    for (let elements of arr) { //[1,2] or for (let i=0;i<arr.length;i++){sum =sum+arr[i][0];}
+        sum = sum + elements[0];
     }
     return sum;
 }

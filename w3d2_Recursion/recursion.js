@@ -1,0 +1,7 @@
+/*
+Write recursive functions to
+count the digits of a given number
+reverse a given string.
+calculate the power of any base
+Write your own recursive logic. Do not use existing methods like reverse or length property.
+*/
