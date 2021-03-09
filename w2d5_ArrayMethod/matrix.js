@@ -1,3 +1,4 @@
+/* eslint-disable require-jsdoc */
 
 "use strict";
 
@@ -16,3 +17,5 @@ for (let i = 0; i < matrix.length; i++) {
 }
 
 console.log(total);
+
+

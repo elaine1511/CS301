@@ -1,9 +1,13 @@
 "use strict";
 
+const { get } = require("http");
+
 exports.isPersonEqual = isPersonEqual;
 exports.countProperties = countProperties;
 exports.checkSpam = checkSpam;
 exports.suffix = suffix;
+exports.sumFirst = sumFirst;
+exports.titleCase = titleCase;
 exports.getAverageAge = getAverageAge;
 /*
 1. Write the code, one line for each action:
@@ -108,8 +112,7 @@ function suffix(str1, str2) {
         }
         suffix = suffix + str1[len1 - i - 1];
     }
-    // let result = suffix.split().reverse().join("");
-    return suffix.reverse();
+    return suffix.split().reverse().join("");
 }
 console.log(suffix("jackson", "johnson"));
 
@@ -117,6 +120,16 @@ console.log(suffix("jackson", "johnson"));
 
 // 6.	Write a function named titleCase with one parameter named s. This function 
 // returns a copy of s but with the first letter of each word capitalized.
+/**
+ * 
+ * @param {string} str is string
+ * @return {string} copy of str with uper case
+ */
+function titleCase(str) {
+    let copy = str.slice();
+    let result = copy[0].toUpperCase() + copy.slice(1);
+    return result;
+}
 
 
 /*
@@ -125,24 +138,35 @@ Use for .. of
 */
 /**
  * 
- * @param {array} users array of objects
- * @return {number} average of age
+ * @param {array} users is an array
+ * @return {number} average age
  */
 function getAverageAge(users) {
-    let average;
     let age = 0;
-    for (let key of users) {
-        age = age + users[key].age;
+    for (let element of users) {
+        age = age + element.age;
     }
-    average = age / users.length;
-    return average;
+    return age / users.length;
 }
 const people = [{ name: "Sam", age: 20 }, { name: "Fred", age: 10 }];
 console.log(getAverageAge(people));
-
 
 
 /* 8.	Write a function, sumFirst, to return the sum of the first elements of the inner arrays for arrays with the following structure.
 Use a for .. of loop.
 arr = [[1, 2], [3, 4], [5, 6]]
 */
+/**
+ * 
+ * @param {*} arr is tested
+ * @return {number} sum
+ */
+function sumFirst(arr) {
+    let sum = 0;
+    for (let i = 0; i < arr.length; i++) {
+        sum = sum + arr[i][0];
+    }
+    return sum;
+}
+console.log(sumFirst([[1, 2], [3, 4], [5, 6]]));
+
