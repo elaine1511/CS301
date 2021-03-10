@@ -1,3 +1,4 @@
+/* eslint-disable require-jsdoc */
 /*
 Write recursive solution to find Fibonacci(n) based on following definition
 fibonacci(0) = 0
@@ -24,4 +25,24 @@ function fibonacci(n) {
         return nextFib;
     }
 }
-console.log(fibonacci(7));
+
+function nthFib(n) {
+    if (n === 0) {
+        return 0;
+    } else if (n === 1) {
+        return 1;
+    } else {
+        let prev2 = 0;
+        let prev1 = 1;
+        let result;
+        for (let i = 2; i <= n; i++) {
+            result = prev1 + prev2;
+            prev2 = prev1;
+            prev1 = result;
+        }
+        return result;
+    }
+
+}
+console.log(fibonacci(6));
+console.log(nthFib(6));

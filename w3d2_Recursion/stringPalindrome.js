@@ -7,10 +7,14 @@
 "use strict";
 
 function isStringPalindrome(str) {
-    if (str === "")
-        return false;
+    if (str.length === 0 || str.length === 1)
+        return true;
     else {
-
+        if (str[0] === str[str.length - 1]) {
+            return isStringPalindrome(str.substr(1, str.length - 2));
+        } else {
+            return false;
+        }
     }
-
 }
+console.log(isStringPalindrome("daadd"));

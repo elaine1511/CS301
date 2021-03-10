@@ -67,21 +67,16 @@ console.log(reverse2String(['Quick', 'Brown', 'Fox']));
     c.	Third value is the last index of value found in the array or -1.
 */
 
-function enhancedIncludes(arr, value) {
+function enhancedIncludes(arr, searchValue) {
     let newArr = [];
-    for (let i = 0; i < arr.length; i++) {
-        if (arr[i] === value) {
-            newArr.push(true);
-            newArr.push(arr.indexOf(arr[i]));
-            newArr.push(arr.lastIndexOf(arr[i]));
-            return newArr;
-        }
-    }
-    newArr.push(false, -1, -1);
+
+    newArr[0] = arr.includes(searchValue);
+    newArr[1] = arr.indexOf(searchValue);
+    newArr[2] = arr.lastIndexOf(searchValue);
     return newArr;
 }
 
-console.log(enhancedIncludes([1, 2, 3, 4, 2], 5)); //[true, 1, 4])
+console.log(enhancedIncludes([1, 2, 3, 4, 2], 5)); //[false, -1, -1])
 
 /* 5. Write a function, ssReverse, that returns reversed copy of a given array (original array should remain intact).
 Do this without using reverse method, instead use splice and slice methods.  */
