@@ -32,3 +32,14 @@ describe("calculate the power of any base", function () {
         assert.strictEqual(rec.power(10, 4), 10000);
     });
 });
+
+describe("power of negative exponent", function () {
+
+    it("power(5, -3)", function () {
+        assert.ok(rec.negativePow(5, -3) - 1 / 125 < .0001);
+    });
+    it("power(5, 3)", function () {
+        assert.strictEqual(rec.negativePow(5, 3), 125);
+    });
+
+});
