@@ -1,3 +1,4 @@
+/* eslint-disable require-jsdoc */
 /*
 Write a defining table and then a JavaScript function isReversedPrime, 
 that takes a number as an input and check if the reverse of the input number is prime or not.

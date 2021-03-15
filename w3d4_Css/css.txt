@@ -1,0 +1,4 @@
+1/ id attribute allows you to give a unique ID to any element on a page
+• Each ID must be unique; can only be used once in the page
+2/ class attribute is used to group some elements and give a style to only that group
+• unlike an id, a class can be reused as much as you like on the page

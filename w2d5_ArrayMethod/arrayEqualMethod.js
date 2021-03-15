@@ -6,7 +6,7 @@ function arrEquals(arr1, arr2) {
     // check length of 2 arrays before comparing
     if (arr1.length !== arr2.length) return false;
 
-    let comparator = (a, b) => a - b;
+    let comparator = (a, b) => a - b; //sort based on this rule
     arr1.sort(comparator);
     arr2.sort(comparator);
 

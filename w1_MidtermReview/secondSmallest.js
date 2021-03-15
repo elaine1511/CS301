@@ -1,3 +1,4 @@
+/* eslint-disable require-jsdoc */
 /*
 Write a defining table and JavaScript function named secondSmallest that accepts three
 integer numbers as parameters and return the second-smallest value among them.
