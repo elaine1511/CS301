@@ -8,8 +8,9 @@
 function deleteArrayElement(arr, indx) {
     let resultArr = [];
     for (let i = 0; i < arr.length; i++) {
-        if (i === indx) continue;
-        resultArr.push(arr[i]);
+        if (i !== indx) {
+            resultArr.push(arr[i]);
+        }
     }
     return resultArr;
 }

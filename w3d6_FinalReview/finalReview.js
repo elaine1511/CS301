@@ -26,19 +26,5 @@ console.log(repNum + " : " + currCount);
 // e.g [9,9,4,4,6,6,7,7,3,22,22] //3
 
 
-function getDistinctElement(arr) {
-    arr.sort();
-    let distinctArr = [];
-    distinctArr.push(arr[0]);
-    for (let i = 1; i < arr.length; i++) {
-        if (arr[i] === arr[i - 1]) {
-            continue;
-        } else {
-            distinctArr.push(arr[i]);
-        }
-    }
-    return distinctArr;
-}
-console.log(getDistinctElement([1, 1, 2, 2, 2, 3, 4, 4, 6, 7]));
-console.log(getDistinctElement([1, 2, 3, 4, 6, 7]));
+
 
