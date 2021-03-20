@@ -117,3 +117,6 @@ function closestToZero(arr) {
     return [arr[min_i], arr[min_j]];
 }
 console.log(closestToZero([4, 2, -1, 3, -2, -3]));
+
+// 5.  Write a function, that given two arrays representing two non-negative integers with digits, adds
+// the two numbers, and return it as an array.
