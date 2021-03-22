@@ -1,57 +1,6 @@
 /* eslint-disable strict */
 /* eslint-disable require-jsdoc */
 /*
-1. A porcupine number is a prime number whose last digit is 9 and the next prime number that
-follows it also ends with the digit 9. For example, 139 is a porcupine number because:
-a. it is a prime
-b. it ends in a 9
-c. The next prime number after it is 149 which also ends in 9.
-Write a method named findPorcupineNumber which takes an integer argument n and
-returns the first porcupine number that is greater than n. So findPorcupineNumber(0)
-would return 139 (because 139 happens to be the first porcupine number) and so would
-findPorcupineNumber(138). But findPorcupineNumber(139) would return 409 which
-is the second porcupine number.
-#procupine_number
-*/
-// function findPorcupineNumber(n) {
-//     let num = n + 1;
-//     let lastDigit;
-//     let prime = 0;
-//     let newPrime = 0;
-//     while (num > 0) {
-//         //find the prime num that is greater than then given num n
-//         prime = findPrime(num);
-//         newPrime = prime;
-//         //prime num is found, now let's check the last digit
-//         lastDigit = prime % 10;
-//         if (lastDigit === 9) {
-//             //find leading prime number
-//             newPrime = findPrime(prime);
-//             lastDigit = newPrime % 10;
-//             //check the last digit
-//             if (lastDigit === 9) {
-//                 //the porcupine num is found
-//                 return prime;
-//             }
-//         }
-//         num = newPrime;
-//     }
-
-// }
-
-// function findPrime(num) {
-//     let i = num + 1;
-//     let j;
-//     while (i > 0) {
-//         for (j = 2; j < i; j++) {
-//             if (i % j === 0)
-//                 break;
-//         }
-//         if (i === j) return i;
-//         i++;
-//     }
-// }
-// console.log(findPrime(0));
 
 
 /*
@@ -118,5 +67,3 @@ function closestToZero(arr) {
 }
 console.log(closestToZero([4, 2, -1, 3, -2, -3]));
 
-// 5.  Write a function, that given two arrays representing two non-negative integers with digits, adds
-// the two numbers, and return it as an array.

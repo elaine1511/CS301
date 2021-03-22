@@ -1,6 +1,6 @@
 "use strict"; 
 const assert = require("assert");
-const solutions = require("./solutions.js");
+const solutions = require("./solutions.js.js");
 
 describe("divisibleSumPairs", function () {
     it("for arr= [1,2,3,4,5,6] and k=5 result should be 3", function () {

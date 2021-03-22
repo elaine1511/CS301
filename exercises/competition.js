@@ -10,6 +10,7 @@ k= 5
 */
 exports.divisibleSumPairs = divisibleSumPairs;
 exports.findMinDistance = findMinDistance;
+exports.computeHeight = computeHeight;
 
 function divisibleSumPairs(arr, k) {
     let count = 0;
@@ -31,33 +32,56 @@ type of birds are most frequent, return the smallest of their ids.
 [1,1,2,2,3] ->1
 [1,4,4,4,5,3] ->4
 */
-// function mostFrequentSight(arr) {
-//     let count = 1;
-//     let maxCount = 0;
-//     let mostFre;
-//     for (let i = 0; i < arr.length; i++) {
-//         for (let j = i + 1; j < arr.length; j++) {
-//             if (arr[i] === arr[j]) {
-//                 count++;
-//             }
-//         }
-//         if (count > maxCount) {
-//             mostFre = arr[i];
-//             maxCount = count;
-//         }
-//         if (mostFre)
-//     }
-//     return mostFre;
+function mostFrequentSight(arr) {
+    
 
-// }
-// console.log(mostFrequentSight([1, 1, 2, 2, 3]));
+}
+console.log(mostFrequentSight([1, 1, 2, 2, 3]));
 
 /*
 3. There is a large pile of socks that must be paired by color. Write a
 function countSocksPairs, that given an array of integers representing the color of each sock,
 determines how many pairs of socks with matching colors there are
 */
+function countSocksPairs(arr) {
+    let counter = 0;
+    let count = 0;
+    for (let i = 0; i < arr.length; i++) {
+        count = 1;
+        for (let j = i + 1; j < arr.length; j++) {
+            if (arr[i] == arr[j]) {
+                count++;
+            }
+        }
+        if (count % 2 == 0) {
+            counter++;
+        }
+    }
+    return counter;
+}
 
+console.log(countSocksPairs([1, 2, 1, 2, 1, 3, 2]));
+
+/*
+
+*/
+
+function computeHeight(height, cycles) {
+
+    let year = cycles / 2;
+
+    for (let i = 0; i < year; i++) {
+
+        height = height * 2;
+
+        height = height + 1;
+
+    }
+    return height;
+
+}
+
+console.log(computeHeight(1, 4));
 
 /*
 6. The distance between two array values is the number of indices between them. Write a
